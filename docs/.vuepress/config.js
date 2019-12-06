@@ -19,7 +19,7 @@ module.exports = {
                 text: '前端小册',
                 items: [{
                         text: 'webpack',
-                        link: '/'
+                        link: '/webpack/'
                     },
                     {
                         text: 'canvas',
@@ -37,6 +37,12 @@ module.exports = {
             // docs文件夹下面的webpack文件夹 文档中md文件 书写的位置(命名随意)
             '/webpack/': [
                 '/webpack/', // webpack文件夹的README.md 不是下拉框形式
+                '/webpack/webpack01/',
+                '/webpack/webpack02/',
+                '/webpack/webpack03/',
+                '/webpack/webpack04/',
+                '/webpack/webpack05/',
+                '/webpack/webpack06/'
             ],
             // docs文件夹下面的algorithm文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
             '/canvas/': [
