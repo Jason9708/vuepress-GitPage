@@ -18,11 +18,15 @@ module.exports = {
             {
                 text: '前端小册',
                 items: [{
-                        text: 'webpack',
+                        text: 'Webpack',
                         link: '/webpack/'
                     },
                     {
-                        text: 'canvas',
+                        text: 'Designpattern',
+                        link: '/designpattern/'
+                    },
+                    {
+                        text: 'Canvas',
                         link: '/'
                     }
                 ]
@@ -44,9 +48,16 @@ module.exports = {
                 '/webpack/webpack05/',
                 '/webpack/webpack06/'
             ],
-            // docs文件夹下面的algorithm文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
+            // docs文件夹下面的canvas文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
             '/canvas/': [
                 '/canvas/',
+            ],
+            '/designpattern/': [
+                '/designpattern/',
+                '/designpattern/designpattern01/',
+                '/designpattern/designpattern02/',
+                '/designpattern/designpattern03/',
+                '/designpattern/designpattern04/'
             ]
         }
     }
