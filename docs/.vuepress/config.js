@@ -57,7 +57,12 @@ module.exports = {
                 '/designpattern/designpattern01/',
                 '/designpattern/designpattern02/',
                 '/designpattern/designpattern03/',
-                '/designpattern/designpattern04/'
+                '/designpattern/designpattern04/',
+                '/designpattern/designpattern05/',
+                '/designpattern/designpattern06/',
+                '/designpattern/designpattern07/',
+                '/designpattern/designpattern08/',
+                '/designpattern/designpattern09/'
             ]
         }
     }
