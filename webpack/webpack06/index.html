@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>通过webpack优化前端环境 | CHICAGO</title>
+    <meta name="description" content="前端仔的自我挣扎">
+    <link rel="icon" href="/vuepress-GitPage/logo/favicon.ico">
+    
+    <link rel="preload" href="/vuepress-GitPage/assets/css/0.styles.01a33ba5.css" as="style"><link rel="preload" href="/vuepress-GitPage/assets/js/app.37ca189d.js" as="script"><link rel="preload" href="/vuepress-GitPage/assets/js/2.155b04c3.js" as="script"><link rel="preload" href="/vuepress-GitPage/assets/js/41.0a309ba6.js" as="script"><link rel="prefetch" href="/vuepress-GitPage/assets/js/10.46b0086b.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/11.daa4a2a6.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/12.6b9c3e62.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/13.5c18fc57.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/14.e416db64.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/15.eea646e9.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/16.c3ddacbb.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/17.9c92be23.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/18.1cef88cc.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/19.0007bb60.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/20.ad873dd4.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/21.5c85b951.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/22.1832ea7c.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/23.2ed17f39.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/24.dc466810.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/25.320dfa10.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/26.41238810.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/27.a9e293a0.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/28.440fd059.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/29.d7f07814.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/3.22f6a7dc.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/30.fb22e215.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/31.ddcc866e.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/32.c8af0786.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/33.f19150ca.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/34.40efca14.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/35.1ab28b4a.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/36.003bb1fe.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/37.6bf9045f.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/38.525fc624.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/39.b5dfca7e.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/4.310e4e99.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/40.79c4b5aa.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/42.015a20c9.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/5.10910fab.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/6.9de72c04.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/7.c8439b32.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/8.9911e584.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/9.79c793b2.js">
+    <link rel="stylesheet" href="/vuepress-GitPage/assets/css/0.styles.01a33ba5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-GitPage/" class="home-link router-link-active"><!----> <span class="site-name">CHICAGO</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-GitPage/interview/" class="nav-link">前端面试专栏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端小册" class="dropdown-title"><span class="title">前端小册</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/webpack/" class="nav-link router-link-active">Webpack</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/designpattern/" class="nav-link">Designpattern</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/handwrittenScript/" class="nav-link">常见前端面试手写题</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/flutterNote/" class="nav-link">Flutter</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Jason9708" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress-GitPage/interview/" class="nav-link">前端面试专栏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端小册" class="dropdown-title"><span class="title">前端小册</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/webpack/" class="nav-link router-link-active">Webpack</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/designpattern/" class="nav-link">Designpattern</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/handwrittenScript/" class="nav-link">常见前端面试手写题</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/flutterNote/" class="nav-link">Flutter</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Jason9708" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress-GitPage/webpack/" class="sidebar-link">webpack小册</a></li><li><a href="/vuepress-GitPage/webpack/webpack01/" class="sidebar-link">webpack 如何解析代码模块路径</a></li><li><a href="/vuepress-GitPage/webpack/webpack02/" class="sidebar-link">loader 与 plugin</a></li><li><a href="/vuepress-GitPage/webpack/webpack03/" class="sidebar-link">配置webpack-dev-server</a></li><li><a href="/vuepress-GitPage/webpack/webpack04/" class="sidebar-link">区分开发与生产环境</a></li><li><a href="/vuepress-GitPage/webpack/webpack05/" class="sidebar-link">用HMR提高开发效率</a></li><li><a href="/vuepress-GitPage/webpack/webpack06/" class="active sidebar-link">通过webpack优化前端环境</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#优化前端资源加载-图片加载与代码压缩" class="sidebar-link">优化前端资源加载 - 图片加载与代码压缩</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#css-sprites" class="sidebar-link">Css Sprites</a></li><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#图片压缩" class="sidebar-link">图片压缩</a></li><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#使用dataurl" class="sidebar-link">使用DataURL</a></li><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#代码压缩" class="sidebar-link">代码压缩</a></li></ul></li><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#优化前端资源加载-分离代码文件" class="sidebar-link">优化前端资源加载 - 分离代码文件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#分离代码文件" class="sidebar-link">分离代码文件</a></li></ul></li><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#优化前端资源加载-进一步控制js大小" class="sidebar-link">优化前端资源加载 - 进一步控制Js大小</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#按需加载" class="sidebar-link">按需加载</a></li><li class="sidebar-sub-header"><a href="/vuepress-GitPage/webpack/webpack06/#tree-shaking" class="sidebar-link">Tree Shaking</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="通过webpack优化前端环境"><a href="#通过webpack优化前端环境" class="header-anchor">#</a> 通过webpack优化前端环境</h1> <h2 id="优化前端资源加载-图片加载与代码压缩"><a href="#优化前端资源加载-图片加载与代码压缩" class="header-anchor">#</a> 优化前端资源加载 - 图片加载与代码压缩</h2> <p>我们总是希望浏览器在加载页面时用的时间越短越好，所以构建出来的文件应该越少越小越好，一来减少浏览器需要发起请求的数量，二来减少下载请求资源的时间</p> <p>其实<code>webpack</code>把多个代码文件打包成几个必须的静态资源，已经很大程度减少了静态资源请求数量了</p> <p>下面我们使用<code>webpack</code>实现更多的前端资源加载的优化需求</p> <h3 id="css-sprites"><a href="#css-sprites" class="header-anchor">#</a> Css Sprites</h3> <p><code>Css Sprites</code>技术是前端领域一种常见的用于减少图片资源请求数的优化方式</p> <p>如果使用的是<code>webpack 3.x</code>，需要<code>Css Sprites</code>的话，可以使用<code>webpack-spritesmith</code>或者<code>sprite-webpack-plugin</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>以webpack-spritesmith为例子，安装依赖  npm install webpack-spritesmith --save-dev
+
+修改webpack配置
+
+module: {
+    loader: [
+        // ... 这里需要有处理图片的loader，如file-loader
+    ]
+},
+resolve: {
+    modules: [
+        'node_modules',
+        'spritesmith-generated', // webpack-spritesmith 生产所需文件的目录
+    ]
+},
+plugins: [
+    new SpritesmithPlugin({
+        src: {
+            cwd: path.resovle(__dirname, 'src/ico'), // 多个图片所在的目录
+            glob: '*.png'  // 匹配图片的路径
+        },
+        target: {
+            // 生产最终图片的路径
+            image: path.resovle(__dirname, 'src/spritesmith-generated/sprite.png'),
+            // 生成所需 SASS/LESS/Stylus mixins代码，我们使用Stylus预处理器作为例子
+            css: path.resolve(__dirname, 'src/spritesmith-generated/sprite.styl'),
+        },
+        apiOptions: {
+            cssImgRef: &quot;~sprite.png&quot;
+        }
+    })
+]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>在你需要的样式代码中使用`sprite.styl`，只需引入后调用需要的`mixins`
+
+@import `~sprite.styl`
+
+.close-button
+    sprite($close)
+.open-button
+    sprite($open)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p><strong>❗ <code>webpack-spritesmith</code>和<code>sprite-webpack-plugin</code>还没更新到<code>webpack 4.x</code>，需要配合<code>postcss</code>和<code>postcss-sprites</code>，才能实现</strong></p> <h3 id="图片压缩"><a href="#图片压缩" class="header-anchor">#</a> 图片压缩</h3> <p>图片资源会占用前端资源的很大一部分，<code>file-loader</code>可以用来处理图片文件，在次基础上，我们还可以再添加一个<code>image-webpack-loader</code>来压缩处理图片</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    // ...
+    module: {
+        rules: [
+            {
+                test: /.*\.(gif|png|jpe?g|svg|webp)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {}
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: { // 压缩 jpeg 的配置
+                                progressive: true,
+                                quality: 65
+                            },
+                            optipng: { // 使用 imagemin-optipng 压缩 png，enable: false 为关闭
+                                enabled: false,
+                            },
+                            pngquant: { // 使用 imagemin-pngquant 压缩 png
+                                quality: '65-90',
+                                speed: 4
+                            },
+                            gifsicle: { // 压缩 gif 的配置
+                                interlaced: false,
+                            },
+                            webp: { // 开启 webp，会把 jpg 和 png 图片压缩为 webp 格式
+                                quality: 75
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h3 id="使用dataurl"><a href="#使用dataurl" class="header-anchor">#</a> 使用DataURL</h3> <p>有些时候我们会有一些很小的图片，并不想用<code>Css Sprites</code>的方式来处理，那么我们可以在<code>webpack</code>中使用<code>url-loader</code>来处理这些很小的图片 （常用）</p> <p><code>url-loader</code> 与 <code>file-loader</code> 的功能类似，但是在处理文件的时候，可以通过配置指定一个大小，当文件小于这个配置时，<code>url-loader</code>会将其转换成一个<code>base64</code>编码的<code>DataURL</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    // ...
+    modules:{
+        rules: [
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192, // 单位是 Byte，当文件小于 8KB 时作为 DataURL 处理
+                        },
+                    },
+                ],
+            }
+        ]
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h3 id="代码压缩"><a href="#代码压缩" class="header-anchor">#</a> 代码压缩</h3> <p><code>webpack 4.x</code>版本运行的时候，<code>mode</code>为<code>production</code>时会启动压缩<code>Js</code>的插件，而<code>webpack 3.x</code>，使用压缩<code>Js</code>代码插件的是<code>uglifyjs-webpack-plugin</code></p> <p>在生产环境中，压缩<code>Js</code>代码基本是一个必不可少的步骤，这样可以大大减小<code>JavaScript</code>的体积</p> <p>除了压缩<code>Js</code>代码之外，我们还可以压缩<code>Html,Css</code>，虽然这种压缩只能移除空格换行等无功能性字符，但也能在一定程度上减小文件大小，在<code>webpack</code>中的配置使用也不是特别麻烦，所以我们通常也会使用</p> <p>对于<code>HTML</code>文件，可以使用<code>html-webpack-plugin</code>插件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  // ...
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html', // 配置输出文件名和路径
+      template: path.join(__dirname, './src/index.html'),// 配置文件模板
+      minify: { // 压缩 HTML 的配置
+        minifyCSS: true, // 压缩 HTML 中出现的 CSS 代码
+        minifyJS: true // 压缩 HTML 中出现的 JS 代码
+      }
+    }),
+  ],
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>对于<code>css</code>文件，可以使用<code>css-loader</code>，也提供了压缩<code>CSS</code>代码的功能</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  module: {
+    rules: [
+      // ...
+      {
+        test: /\.css/,
+        include: [
+          path.resolve(__dirname, 'src'),
+        ],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true, // 使用 css 的压缩功能
+            },
+          },
+        ],
+      },
+    ],
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>在<code>css-loader</code>的选项中配置<code>minimize</code>字段为<code>true</code>来使用<code>css</code>压缩代码的功能</p> <p><code>css-loader</code>是使用<code>cssnano</code>来压缩代码的，<code>minimize</code>字段也可以配置为一个对象，来将相关配置传递给 <code>cssnano</code></p> <p>关于<code>cssnano</code>内容可参考 https://cssnano.co/</p> <hr> <h2 id="优化前端资源加载-分离代码文件"><a href="#优化前端资源加载-分离代码文件" class="header-anchor">#</a> 优化前端资源加载 - 分离代码文件</h2> <p>如何利用浏览器的缓存以及在<code>webpack</code>中实现按需加载代码</p> <h3 id="分离代码文件"><a href="#分离代码文件" class="header-anchor">#</a> 分离代码文件</h3> <p>关于分离<code>css</code>文件，我们可以使用<code>webpack</code>中的<code>extract-text-webpack-plugin</code>插件</p> <p><strong>为什么要把<code>css</code>文件分离出来，而不是直接一起打包在<code>Js</code>中？</strong></p> <p>最主要的原因是我们希望更好地利用缓存，假设我们原本页面的静态资源都打包成一个<code>Js</code>文件，加载页面时虽然只需要加载一个<code>Js</code>文件，
+但一旦我们的代码改变了，用户访问新的页面时就需要重新加载一个新的<code>Js</code>文件。有些情况下，我们只是单独修改了样式，这样也要重新加载整个应用的<code>Js</code>文件，是很不划算的</p> <p>还有一种情况是我们有多个页面，它们都可以共用一部分样式，如果每个页面都单独打包成一个<code>Js</code>文件，那么每次访问页面都会重复加载原本可以共享的<code>Css</code>代码。</p> <p>而如果是分离开，第二个页面就有了<code>Css</code>文件的缓存，访问速度自然更快，虽然对第一个页面来说多了一个请求，但缓存带来的速度提升是更可观的</p> <p><strong>那么如何使用webpacl来把代码中公共使用的部分分离成独立的文件呢？</strong></p> <p><code>webpack 4.x</code>与<code>webpack 3.x</code>在代码分离这部分的做法区别较大</p> <p><code>webpack 3.x</code>以前的版本是使用<code>CommonsChunkPlugin</code>来做代码分离的，而<code>webpack 4.x</code>则是把功能移到了<code>optimize.splitChunks</code>中，直接使用该配置就可以实现代码分离</p> <h4 id="webpack-4-x-的-optimization"><a href="#webpack-4-x-的-optimization" class="header-anchor">#</a> webpack 4.x 的 optimization</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    // ... webpack配置
+    optimization: {
+        splitChunks: {
+            chunk: &quot;all&quot;,  // 所有的chunks代码公共的部分分离出来成为一个单独的文件
+        }
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>我们需要在<code>HTML</code>中引用两个构建出来的<code>Js</code>文件，并且<code>common.js</code>需要在入口代码之前，下面是个简单的例子</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;script src=&quot;commons.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;entry.bundle.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>之前我们提到拆分文件是为了更好地利用缓存，分离公共类库很大程度上是为了让多页面利用缓存，从而减少下载的代码量，同时，也有代码变更时可以利用缓存减少下载代码量的好处。从这个角度出发，个人建议将公共使用的第三方类库显式地配置为公共的部分，而不是 webpack 自己去判断处理。因为公共的第三方类库通常升级频率相对低一些，这样可以避免因公共 chunk 的频繁变更而导致缓存失效。</p> <p><strong>显式配置共享类库操作</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  entry: {
+    vendor: [&quot;react&quot;, &quot;lodash&quot;, &quot;angular&quot;, ...], // 指定公共使用的第三方类库
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: &quot;initial&quot;,
+          test: &quot;vendor&quot;,
+          name: &quot;vendor&quot;, // 使用 vendor 入口作为公共部分
+          enforce: true,
+        },
+      },
+    },
+  },
+  // ... 其他配置
+}
+
+// 或者
+module.exports = {
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /react|angluar|lodash/, // 直接使用 test 来做路径匹配
+          chunks: &quot;initial&quot;,
+          name: &quot;vendor&quot;,
+          enforce: true,
+        },
+      },
+    },
+  },
+}
+
+// 或者
+module.exports = {
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: &quot;initial&quot;,
+          test: path.resolve(__dirname, &quot;node_modules&quot;) // 路径在 node_modules 目录下的都作为公共部分
+          name: &quot;vendor&quot;, // 使用 vendor 入口作为公共部分
+          enforce: true,
+        },
+      },
+    },
+  },
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><p>上述第一种做法是显示指定哪些类库作为公共部分，第二种做法实现的功能差不多，只是利用了 test 来做模块路径的匹配，第三种做法是把所有在 node_modules 下的模块，即作为依赖安装的，都作为公共部分。你可以针对项目情况，选择最合适的做法。</p> <h4 id="webpack-3-x-的-commonschunkplugin"><a href="#webpack-3-x-的-commonschunkplugin" class="header-anchor">#</a> webpack 3.x 的 CommonsChunkPlugin</h4> <p><code>webpack 3.x</code>以下的版本需要用到<code>webpack</code>自身提供的<code>CommonsChunkPlugin</code>插件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    // ...
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'commons', // 公共使用的chunk的名称
+            filename: 'commons.js', // 公共chunk的生成文件名
+            minChunks：3, // 公共的部分必须被3个chunk共享
+        })
+    ]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><code>chunk</code>在这里是构建的主干，可以简单理解为一个入口对应一个<code>chunk</code></p> <p>以上插件配置的构建后会生成一个<code>commons.js</code>文件，该文件就是代码中的公共部分，上面的配置中<code>minChunks</code>为3，意思是当一个模块被3个以上的<code>chunk</code>依赖时，这个模块就会被划分到<code>commons</code>chunk中去。</p> <p><code>CommonsChunkPlugin</code>也是支持显示配置共享类库的</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  entry: {
+    vendor: ['react', 'react-redux'], // 指定公共使用的第三方类库
+    app: './src/entry',
+    // ...
+  },
+  // ...
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor' // 使用 vendor 入口作为公共部分
+      filename: &quot;vendor.js&quot;, 
+      minChunks: Infinity, // 这个配置会让 webpack 不再自动抽离公共模块
+    }),
+  ],
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上述配置会生成一个名为<code>vandor.js</code>的共享代码文件，里面包含了<code>React</code>和<code>React-Redux</code>库的代码，可以提供给多个不同的入口代码使用。</p> <p>这里<code>minChunks</code>配置使用了<code>Infinity</code>，可以理解为<code>webpack</code>不自动抽离公共模块。（如果这里指定了3，那么被3个以上的<code>chunk</code>依赖的模块会和<code>React，React-Redux</code>一同打包进<code>vendor</code>,这样就失去显示指定的意义</p> <hr> <h2 id="优化前端资源加载-进一步控制js大小"><a href="#优化前端资源加载-进一步控制js大小" class="header-anchor">#</a> 优化前端资源加载 - 进一步控制Js大小</h2> <h3 id="按需加载"><a href="#按需加载" class="header-anchor">#</a> 按需加载</h3> <p>前面讲述如何将大的代码文件进行拆分，抽离出多个页面共享的代码文件，但是当你的<code>Web</code>应用是个单页面应用(Vue),并且及其复杂的时候，你会发现有一些代码并不是每一个用户都需要用到的。</p> <p>我们希望可以将这一部分代码抽离出去，仅当用户真正需要用到时才加载，这时就可以使用<code>webpack</code>的按需加载功能</p> <p>在<code>webpack</code>的构建环境中，要按需加载代码模块很简单，遵循<code>ES</code>标准的动态加载语法<code>dynamic-import</code>来编写代码即可，<code>webpack</code>会自动处理使用该语法编写的模块</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// import 作为一个方法使用，传入模块名即可，返回一个Promise对象来获取模块暴露的对象
+
+import('lodash').then( _ =&gt; {
+    console.log(_.lash([1,2,3])) // 打印3
+})
+
+
+这里,webpack构建时会自动把lodash模块分离出来，并且在代码内部实现动态加载lodash的功能
+
+动态加载代码模块依赖于网络，所以模块内容会异步返回，
+
+因此import方法需要返回一个promise来获取动态加载的模块内容
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>❗ 如果使用了<code>Babel</code>的话，还需要<code>Syntax Dynamic Import</code>这个<code>Babel</code>插件来处理<code>import()</code>这种语法</strong></p> <p>由于动态加载代码模块的语法依赖于<code>promise</code>，对于低版本的浏览器，需要添加<code>promise</code>的<code>polyfill</code>后才能使用</p> <h3 id="tree-shaking"><a href="#tree-shaking" class="header-anchor">#</a> Tree Shaking</h3> <p><code>Tree Shaking</code>可以移除<code>Js</code>上下文中的未引用代码，删除用不着的代码，能够有效减少<code>JS</code>代码文件的大小</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>官方例子
+
+// src/math.js
+export function square(x) {
+    return x * x
+}
+export function cube(x) {
+    return x * x * x
+}
+
+// src/index.js
+import { cube } from './math.js'
+console.log(cube(3))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>很明显，<code>square</code>这个方法未被引用，是可以删掉的。</p> <p>在<code>webpack</code>中，只有启动了<code>Js</code>代码压缩功能（即使用 <code>uglify</code>）时，会做<code>Tree shaking</code>优化</p> <ul><li><code>webpack 4.x</code>需要指定<code>mode</code>为<code>production</code></li> <li><code>webpack 3.x</code>需要配置<code>UglifyJsPlugin</code></li></ul> <p>启动之后，构建出来的包就会移除<code>square</code>这部分代码</p> <p><strong>PS:</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>如果你在项目中使用了Babel的话，要把Babel解析模块语法的功能关掉，在.babelrc配置中增加 &quot;modules&quot;:false 这个配置
+
+
+// .babelrc
+{
+    &quot;presets&quot;:[[&quot;env&quot;,{ &quot;modules&quot;: false }]]
+}
+
+这样可以把`import/export`这一部分模块语法交由`webpack`处理，否则无法使用`Tree Shaking`的优化
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/6/2019, 2:50:39 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-GitPage/webpack/webpack05/" class="prev">用HMR提高开发效率</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-GitPage/assets/js/app.37ca189d.js" defer></script><script src="/vuepress-GitPage/assets/js/2.155b04c3.js" defer></script><script src="/vuepress-GitPage/assets/js/41.0a309ba6.js" defer></script>
+  </body>
+</html>

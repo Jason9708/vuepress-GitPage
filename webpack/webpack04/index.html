@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>区分开发与生产环境 | CHICAGO</title>
+    <meta name="description" content="前端仔的自我挣扎">
+    <link rel="icon" href="/vuepress-GitPage/logo/favicon.ico">
+    
+    <link rel="preload" href="/vuepress-GitPage/assets/css/0.styles.01a33ba5.css" as="style"><link rel="preload" href="/vuepress-GitPage/assets/js/app.37ca189d.js" as="script"><link rel="preload" href="/vuepress-GitPage/assets/js/2.155b04c3.js" as="script"><link rel="preload" href="/vuepress-GitPage/assets/js/39.b5dfca7e.js" as="script"><link rel="prefetch" href="/vuepress-GitPage/assets/js/10.46b0086b.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/11.daa4a2a6.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/12.6b9c3e62.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/13.5c18fc57.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/14.e416db64.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/15.eea646e9.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/16.c3ddacbb.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/17.9c92be23.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/18.1cef88cc.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/19.0007bb60.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/20.ad873dd4.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/21.5c85b951.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/22.1832ea7c.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/23.2ed17f39.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/24.dc466810.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/25.320dfa10.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/26.41238810.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/27.a9e293a0.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/28.440fd059.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/29.d7f07814.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/3.22f6a7dc.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/30.fb22e215.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/31.ddcc866e.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/32.c8af0786.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/33.f19150ca.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/34.40efca14.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/35.1ab28b4a.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/36.003bb1fe.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/37.6bf9045f.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/38.525fc624.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/4.310e4e99.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/40.79c4b5aa.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/41.0a309ba6.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/42.015a20c9.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/5.10910fab.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/6.9de72c04.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/7.c8439b32.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/8.9911e584.js"><link rel="prefetch" href="/vuepress-GitPage/assets/js/9.79c793b2.js">
+    <link rel="stylesheet" href="/vuepress-GitPage/assets/css/0.styles.01a33ba5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-GitPage/" class="home-link router-link-active"><!----> <span class="site-name">CHICAGO</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-GitPage/interview/" class="nav-link">前端面试专栏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端小册" class="dropdown-title"><span class="title">前端小册</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/webpack/" class="nav-link router-link-active">Webpack</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/designpattern/" class="nav-link">Designpattern</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/handwrittenScript/" class="nav-link">常见前端面试手写题</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/flutterNote/" class="nav-link">Flutter</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Jason9708" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress-GitPage/interview/" class="nav-link">前端面试专栏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端小册" class="dropdown-title"><span class="title">前端小册</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/webpack/" class="nav-link router-link-active">Webpack</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/designpattern/" class="nav-link">Designpattern</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/handwrittenScript/" class="nav-link">常见前端面试手写题</a></li><li class="dropdown-item"><!----> <a href="/vuepress-GitPage/flutterNote/" class="nav-link">Flutter</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Jason9708" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress-GitPage/webpack/" class="sidebar-link">webpack小册</a></li><li><a href="/vuepress-GitPage/webpack/webpack01/" class="sidebar-link">webpack 如何解析代码模块路径</a></li><li><a href="/vuepress-GitPage/webpack/webpack02/" class="sidebar-link">loader 与 plugin</a></li><li><a href="/vuepress-GitPage/webpack/webpack03/" class="sidebar-link">配置webpack-dev-server</a></li><li><a href="/vuepress-GitPage/webpack/webpack04/" class="active sidebar-link">区分开发与生产环境</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vuepress-GitPage/webpack/webpack05/" class="sidebar-link">用HMR提高开发效率</a></li><li><a href="/vuepress-GitPage/webpack/webpack06/" class="sidebar-link">通过webpack优化前端环境</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="区分开发与生产环境"><a href="#区分开发与生产环境" class="header-anchor">#</a> 区分开发与生产环境</h1> <p><code>webpack 4.x</code>引入了<code>mode</code>的概念，在运行<code>webpacks</code>时需要指定使用<code>production</code>还是<code>development</code>，这个功能说明我们需要具备运行两套构建环境的能力</p> <p>当你指定了使用<code>production mode</code>时，默认会启动各种性能优化的功能，而<code>development mode</code>，则会开启debug工具，运行时打印详细错误信息。</p> <h3 id="在配置文件中区分mode"><a href="#在配置文件中区分mode" class="header-anchor">#</a> 在配置文件中区分mode</h3> <p>之前我们的配置文件都是直接暴露一个<code>js</code>对象，这种方式无法获取到<code>mode</code>参数，所以我们要更换另外一种方式。</p> <p>官文多种配置类型文档：https://webpack.docschina.org/configuration/configuration-types/</p> <p>配置文件可以暴露一个函数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = (env, argv) =&gt; ({
+    // ...
+    optimization: {
+        minimize: false,
+        // 通过argv来获取mode
+        minimizer: argv.mode === 'production' ? [
+            // ... 自己的配置
+        ]:[]
+    }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>这样获取mode之后，我们就能区分不同的构建环境，然后根据不通环境再对特殊的<code>loader</code>或<code>plugin</code>做额外配置</p> <h3 id="拆分配置"><a href="#拆分配置" class="header-anchor">#</a> 拆分配置</h3> <p>我们可以将<code>webpack</code>的配置按照不同的环境拆分成多个文件，运行时直接根据环境变量加载对应的配置文件</p> <p>举个爪子，当我们用<code>webpack</code>构建<code>vue</code>项目时,即<code>vue init webpack projectname</code>,我们可以看到<code>build</code>文件夹下已经区分了<code>mode</code></p> <p>根据这个例子，我们可以划分成下面几个文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>- webpack.base.js       基础部分，即共享的配置
+- webpack.dev.js        开发环境使用的配置
+- webpack.pro.js        生产环境使用的配置
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="如何处理这样的配置拆分"><a href="#如何处理这样的配置拆分" class="header-anchor">#</a> 如何处理这样的配置拆分</h4> <p>对于<code>webpack</code>的配置，其实就是对外暴露一个<code>js</code>对象，所以对于这个对象，我们可以使用<code>js</code>代码来修改</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const config = {
+    // webpack配置
+}
+
+config.plugins.push(...) // 修改这个配置对象
+
+module.exports = config // 暴露这个对象
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>此外我们要有一个工具（<code>webpack-merge</code>）帮助我们合并多个配置对象，这样我们就可以很轻松地拆分<code>webpack</code>配置，然后判断当前的环境变量，使用工具将对应环境的配置对象整合后提供给<code>webpack</code></p> <p>举个爪子</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>基础共享部分（webpack.base.js
+
+module.exports = {
+    entry: ...,
+    output: {
+        ...
+    },
+    resolve: {
+        ...
+    },
+    module: {
+        ...
+    },
+    plugins: [
+        ...
+    ]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>webpack.dev.js 
+需求： 添加loader/plugin
+
+const merge = require('webpack-merge')
+const webpack = require('webpack')
+const baseWebpackConfig = require('./webpack.base.js')
+
+module.exports = merga(baseWebpackConfig, {
+    module: {
+        rules: [
+            // 注意：当这里use的值是字符串或者是对象的话，会替换掉原本规则use的值
+            ... 
+        ]
+    },
+    plugins: [
+        // plugins会与baseWebpackConfig中的plugins数组进行合并
+        ...
+    ]
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/6/2019, 2:50:39 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-GitPage/webpack/webpack03/" class="prev">配置webpack-dev-server</a></span> <span class="next"><a href="/vuepress-GitPage/webpack/webpack05/">用HMR提高开发效率</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-GitPage/assets/js/app.37ca189d.js" defer></script><script src="/vuepress-GitPage/assets/js/2.155b04c3.js" defer></script><script src="/vuepress-GitPage/assets/js/39.b5dfca7e.js" defer></script>
+  </body>
+</html>
